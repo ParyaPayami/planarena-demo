@@ -1,0 +1,11 @@
+{
+  "n_buildings": 9188,
+  "log_log_r": 0.816,
+  "log_r2": 0.666,
+  "median_abs_pct_error": 0.287,
+  "aggregate_ratio_modelled_to_observed": 1.0,
+  "observed_mt": 7.627,
+  "modelled_mt": 7.626,
+  "note": "In-sample (EUIs fitted on the same LL84 year); LL84 covers buildings >= 25,000 sq ft.",
+  "reference_sha256": "c5dabdc44a8d84094978d1fc9ed651b3ecb23fddc46eb1fc5148e05a85ad23ee"
+}

@@ -1,0 +1,82 @@
+{
+  "5553000": {
+    "id": "5553000",
+    "label": "Milwaukee, WI",
+    "tier": "B",
+    "source": "City of Milwaukee MPROP (assessment year 2026) and parcel polygons",
+    "parcels": 148042,
+    "built": "2026-10-17"
+  },
+  "3651000": {
+    "id": "3651000",
+    "label": "New York, NY",
+    "tier": "B",
+    "source": "NYC DCP MapPLUTO 25v3.1 (all boroughs)",
+    "parcels": 856634,
+    "built": "2026-10-18"
+  },
+  "4260000": {
+    "id": "4260000",
+    "label": "Philadelphia, PA",
+    "tier": "B",
+    "source": "Philadelphia OPA property assessments and PWD parcels (OpenDataPhilly)",
+    "parcels": 547410,
+    "built": "2026-10-18"
+  },
+  "0644000": {
+    "id": "0644000",
+    "label": "Los Angeles, CA",
+    "tier": "B",
+    "source": "SCAG 2020 Annual Land Use (existing use, General Plan and zoning as compiled in 2019) and LA County Assessor roll 2025",
+    "parcels": 672444,
+    "built": "2026-10-17"
+  },
+  "4835000": {
+    "id": "4835000",
+    "label": "Houston, TX",
+    "tier": "B",
+    "source": "City of Houston Land Use (Grouped), from Harris Central Appraisal District records",
+    "parcels": 630525,
+    "built": "2026-10-17"
+  },
+  "4819000": {
+    "id": "4819000",
+    "label": "Dallas, TX",
+    "tier": "B",
+    "source": "City of Dallas Existing Land Use (2026), forwardDallas! 2.0 placetypes (2024), base zoning, and Dallas Central Appraisal District 2026 certified data",
+    "parcels": 311431,
+    "built": "2026-10-17"
+  },
+  "4865000": {
+    "id": "4865000",
+    "label": "San Antonio, TX",
+    "tier": "B",
+    "source": "Bexar Appraisal District parcels (December 2025), City of San Antonio Future Land Use and zoning",
+    "parcels": 438009,
+    "built": "2026-10-17"
+  },
+  "1714000": {
+    "id": "1714000",
+    "label": "Chicago, IL",
+    "tier": "B",
+    "source": "CMAP Land Use Inventory 2023, Cook County parcels 2025 and Cook County Assessor records",
+    "parcels": 606894,
+    "built": "2026-10-17"
+  },
+  "0455000": {
+    "id": "0455000",
+    "label": "Phoenix, AZ",
+    "tier": "B",
+    "source": "Maricopa County Assessor parcels (property use codes), MAG Existing Land Use 2026, City of Phoenix General Plan and zoning",
+    "parcels": 510871,
+    "built": "2026-10-17"
+  },
+  "0666000": {
+    "id": "0666000",
+    "label": "San Diego, CA",
+    "tier": "B",
+    "source": "SANDAG Land Use 2025, San Diego County Assessor parcels (SanGIS), City of San Diego General Plan and zoning",
+    "parcels": 272948,
+    "built": "2026-10-18"
+  }
+}

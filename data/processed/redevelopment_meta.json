@@ -1,0 +1,13 @@
+{
+  "likelihood_model": "LightGBM",
+  "destination_model": "GNN + LightGBM (mean)",
+  "horizon_years": 5,
+  "trained_on": "2015->2020 and 2020->2025 (MapPLUTO 15v1, 20v8, 25v3.1)",
+  "test_auc": 0.855,
+  "test_average_precision": 0.146,
+  "test_precision_top1pct": 0.264,
+  "test_base_rate": 0.0123,
+  "test_destination_top1": 0.572,
+  "test_destination_top3": 0.917,
+  "mean_probability_2025": 0.0143
+}

@@ -1,0 +1,91 @@
+# PlanArena impact-engine coefficients.
+# status values:
+#   derived     - computed from the city's own data at engine start-up
+#   provisional - a published-range value not yet checked against a primary source
+#   assumption  - a modelling choice, exposed so users can vary it
+# The UI shows any indicator that depends on provisional values with a "provisional" tag.
+
+version: "0.1"
+
+derived:
+  sqft_per_unit:
+    method: "median ResArea / UnitsRes over residential lots (LandUse 02-03)"
+  mixed_res_share:
+    method: "median ResArea / BldgArea over mixed-use lots (LandUse 04)"
+  commercial_mix:
+    method: "aggregate office / retail / other shares of ComArea over commercial lots (LandUse 05)"
+  industrial_mix:
+    method: "aggregate factory / storage shares over industrial lots (LandUse 06)"
+  value_psf:
+    method: "median AssessTot per sq ft of max(BldgArea, LotArea) by land-use class and community district"
+
+assumptions:
+  buildout_utilization:
+    value: 0.8
+    low: 0.6
+    high: 1.0
+    status: assumption
+    note: "share of the maximum zoning FAR that is built when an unbuilt lot is developed"
+  persons_per_household:
+    value: 1.95
+    low: 1.8
+    high: 2.1
+    status: provisional
+    source: "ACS 5-year average household size, New York County (verify current release)"
+
+access:
+  walk_radius_m: 400        # about a 5-minute walk
+  facility_radius_m: 800    # about a 10-minute walk
+  park_min_sqft: 43560      # at least 1 acre of open space within the walk radius
+  status: assumption
+  source: "Walk-radius thresholds follow common access-standard practice; exposed as assumptions"
+  # services and facilities are continuous: floor area within the radius per resident within the radius
+
+jobs_sqft_per_worker:
+  status: provisional
+  source: "Planning rule-of-thumb ranges; verify against U.S. EIA CBECS 2018 floorspace per worker"
+  office: {value: 250, low: 175, high: 400}
+  retail: {value: 500, low: 300, high: 900}
+  other_commercial: {value: 600, low: 400, high: 1000}
+  factory: {value: 750, low: 450, high: 1200}
+  storage: {value: 2000, low: 1000, high: 4000}
+  public_facility: {value: 600, low: 350, high: 1000}
+  transport_utility: {value: 1500, low: 800, high: 3000}
+
+energy_site_eui_kbtu_per_sqft:
+  status: provisional
+  source: "Typical site-EUI ranges; verify against NYC Local Law 84 benchmarking medians by property type"
+  res: {value: 80, low: 60, high: 100}
+  mix: {value: 85, low: 65, high: 110}
+  com: {value: 90, low: 70, high: 120}
+  ind: {value: 95, low: 60, high: 150}
+  tra: {value: 60, low: 30, high: 100}
+  pub: {value: 110, low: 70, high: 200}
+
+emissions_tco2e_per_kbtu:
+  value: 0.0000690
+  low: 0.0000531
+  high: 0.0000847
+  status: provisional
+  source: "50/50 blend of NYC Local Law 97 2024-2029 factors (electricity 0.000288962 tCO2e/kWh; natural gas 0.00005311 tCO2e/kBtu); verify"
+
+runoff_coefficient_c:
+  status: derived
+  source: "NYC DEP runoff coefficients by surface (roof 1.00; pavement & walks 0.85; other 0.75; grass & soft scape 0.20),
+    as tabulated in NYC DCP, 15 Penn Plaza FEIS, Appendix D runoff-coefficient worksheet ('Runoff coefficients for each
+    surface type are as per NYCDEP'), https://www.nyc.gov/assets/planning/download/pdf/applicants/env-review/15_penn/appendixd_feis.pdf
+    (verified 2026-10-16). Parcel C = roof share x roof C + (1 - roof share) x ground C of the use. Roof share = MapPLUTO
+    gross floor area / floors / lot area (an approximation of the footprint). The values below are ground C by use.
+    Assumptions: built uses and parking have paved open ground (0.85; low = NYCDEP 'other' 0.75); open space is grass &
+    soft scape (0.20; high 0.40 if up to 30% is paths); vacant ground cover is unknown, so it spans soft (0.20) to pavement
+    (0.85) with the midpoint as the central value."
+  roof: {value: 1.00}
+  res: {value: 0.85, low: 0.75, high: 0.85}
+  mix: {value: 0.85, low: 0.75, high: 0.85}
+  com: {value: 0.85, low: 0.75, high: 0.85}
+  ind: {value: 0.85, low: 0.75, high: 0.85}
+  tra: {value: 0.85, low: 0.75, high: 0.85}
+  pub: {value: 0.85, low: 0.75, high: 0.85}
+  opn: {value: 0.20, low: 0.20, high: 0.40}
+  prk: {value: 0.85, low: 0.75, high: 0.85}
+  vac: {value: 0.525, low: 0.20, high: 0.85}

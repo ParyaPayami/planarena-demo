@@ -1,0 +1,90 @@
+{
+  "city": "Manhattan, New York City",
+  "source": "NYC DCP MapPLUTO 25v3.1",
+  "source_path": "data/raw/pluto_25v3_1/mn_mappluto_25v3_1.gpkg",
+  "source_url": "https://www.nyc.gov/content/planning/pages/resources/datasets/mappluto-pluto-change",
+  "source_archive": {
+    "release": "25v3_1",
+    "url": "https://s-media.nyc.gov/agencies/dcp/assets/files/zip/data-tools/bytes/mappluto/nyc_mappluto_25v3_1_arc_shp.zip",
+    "archive_sha256": "1f25df2733e426829ed3736a149f79b8ec247851136caade7d8f23c0655f8960",
+    "extract": "mn_mappluto_25v3_1.gpkg",
+    "extract_sha256": "949521e249058ed4017d10d4022715fd61ba96c4d4d16bca2c49e0b187348fed",
+    "filter": "Borough = 'MN'",
+    "lots": 42075
+  },
+  "source_sha256": "949521e249058ed4017d10d4022715fd61ba96c4d4d16bca2c49e0b187348fed",
+  "data_quality": {
+    "missing_land_use": 133,
+    "zero_lot_area_filled_from_geometry": 32,
+    "zero_building_area": 1983,
+    "duplicate_bbl": 0
+  },
+  "n_parcels": 42075,
+  "use_counts": {
+    "unknown": 133,
+    "res": 20385,
+    "mix": 12062,
+    "com": 4552,
+    "ind": 202,
+    "tra": 420,
+    "pub": 2365,
+    "opn": 594,
+    "prk": 538,
+    "vac": 824
+  },
+  "class_counts": {
+    "unknown": 133,
+    "sf": 2324,
+    "mf_small": 4423,
+    "mf": 13638,
+    "mix": 12062,
+    "ret": 1611,
+    "off": 2424,
+    "hot": 517,
+    "ind": 34,
+    "whs": 168,
+    "edu": 600,
+    "hlt": 241,
+    "civ": 1524,
+    "opn": 594,
+    "tra": 420,
+    "prk": 538,
+    "vac": 824
+  },
+  "bbox_wgs84": [
+    -74.04761491292443,
+    40.68391884793841,
+    -73.90679123775206,
+    40.87910377270229
+  ],
+  "grid": {
+    "cell_m": 50.0,
+    "cell_ft": 164.04199475000001,
+    "x0": 971581.0316045834,
+    "y0": 189682.5967374449,
+    "nx": 234,
+    "ny": 426
+  },
+  "graph_edges": {
+    "adjacent": 156806,
+    "near": 336600,
+    "same_zoning": 168264
+  },
+  "zoning_rules": "NYC Zoning Resolution district purposes and use groups, simplified by PlanArena; provisional, verify against ZR Articles II-IV.",
+  "floor_height_m": 3.5,
+  "levels": {
+    "101": "Financial District & Tribeca",
+    "102": "Greenwich Village & SoHo",
+    "103": "Lower East Side & Chinatown",
+    "104": "Chelsea & Hell's Kitchen",
+    "105": "Midtown",
+    "106": "Murray Hill, Gramercy & Stuy Town",
+    "107": "Upper West Side",
+    "108": "Upper East Side",
+    "109": "Morningside & Hamilton Heights",
+    "110": "Central Harlem",
+    "111": "East Harlem",
+    "112": "Washington Heights & Inwood"
+  },
+  "build_seconds": 5.2
+}

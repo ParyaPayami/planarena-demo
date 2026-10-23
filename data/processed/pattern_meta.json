@@ -1,0 +1,6 @@
+{
+  "model": "LightGBM + GNN embedding",
+  "chosen_by": "results/validation/ablation_gnn.json",
+  "cross_fitted_chunks": 10,
+  "parcels": 42075
+}

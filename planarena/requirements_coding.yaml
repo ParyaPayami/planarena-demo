@@ -1,0 +1,35 @@
+# Hand coding of the long-range planning area (G) of the de-identified requirements catalogue.
+# Coded by reading each requirement against PlanArena v0.3. "need" is a short paraphrase in our own words.
+# status: met (backed by an acceptance test in tests/test_requirements.py) | partial | not met | out of scope
+coded_on: "2026-10-17"  # G11 updated after the usability review
+area: G
+items:
+  - {id: G1,  status: met,          need: "Tie a plan amendment or study to its location", feature: "Studies are stored as parcel-level changes on the parcel twin"}
+  - {id: G2,  status: partial,      need: "Read the agency's central GIS data", feature: "Reads MapPLUTO and uploaded GeoJSON, shapefile, GeoPackage", gap: "No live link to an enterprise GIS (ArcGIS REST or WFS)"}
+  - {id: G3,  status: out of scope, need: "GIS for scheduling inspections", feature: ""}
+  - {id: G4,  status: partial,      need: "Track the amendment process with a configurable workflow", feature: "Fixed status workflow: draft, under review, hearing scheduled, adopted, withdrawn", gap: "Workflow steps are not configurable"}
+  - {id: G5,  status: partial,      need: "Track study status and its documents (staff report, amended text)", feature: "Status; staff report generated on demand", gap: "No document storage or versioned plan text"}
+  - {id: G6,  status: met,          need: "Find and open past amendments and studies", feature: "Studies list, detail and history"}
+  - {id: G7,  status: met,          need: "Record information about a study", feature: "Name, description, study area, hearing date, checklist, changes"}
+  - {id: G8,  status: met,          need: "Describe location, existing development, current plan and proposed change", feature: "Parcel record (existing building, zoning, FAR) plus the proposed use and FAR per parcel"}
+  - {id: G9,  status: not met,      need: "Link a study to related records (other amendments, zoning applications)", gap: "No record linking"}
+  - {id: G10, status: partial,      need: "Attach due dates and hearing dates", feature: "Hearing date", gap: "No other deadlines or statutory clocks"}
+  - {id: G11, status: met,          need: "Configurable study checklist that staff can customise", feature: "Default eight-step checklist; staff add their own steps in the Studies tab"}
+  - {id: G12, status: met,          need: "Keep a history of study activity", feature: "Per-study history and a hash-chained, tamper-evident audit log"}
+  - {id: G13, status: met,          need: "Track status as staff update the workflow", feature: "Status changes are recorded in history and the audit log"}
+  - {id: G14, status: met,          need: "Quantify the change in development potential from an amendment", feature: "Zoning capacity, added capacity, soft sites, homes, jobs and floor area, with ranges"}
+  - {id: G15, status: partial,      need: "Track plan amendments that are not site-specific", feature: "A study can be saved without parcel changes", gap: "No policy-text amendments or citywide policy levers"}
+  - {id: G16, status: partial,      need: "Reports that quantify a proposal, including cumulative analysis of density changes", feature: "Staff report with impacts, density (FAR) edits and capacity; rezoning test with the environmental-review site screen", gap: "No cumulative analysis across several studies"}
+  - {id: G17, status: out of scope, need: "Public portal intake of review requests", feature: ""}
+  - {id: G18, status: not met,      need: "Enter requests received outside the system", gap: "No request intake records"}
+  - {id: G19, status: out of scope, need: "Route applications to internal and external reviewers", feature: ""}
+  - {id: G20, status: not met,      need: "Track a request's reviewers, comments and formal response", gap: "No review-comment records"}
+  - {id: G21, status: partial,      need: "Template for recording research, with attachments", feature: "Description field and staff report template", gap: "No attachments"}
+  - {id: G22, status: not met,      need: "Record public and agency input received outside the system", gap: "The vote models stakeholders; real comments are not logged"}
+  - {id: G23, status: met,          need: "Record the decision or outcome of a review", feature: "Adopted or withdrawn status"}
+  - {id: G24, status: not met,      need: "Link building permits to planning approvals", gap: "No permit data (NYC DOB permits are open and could be added)"}
+  - {id: G25, status: not met,      need: "Add new categories as the work changes", gap: "Categories are fixed"}
+  - {id: G26, status: partial,      need: "Review against code: zoning, temporary uses, special events", feature: "Simplified zoning rules-as-code screen", gap: "Not a legal determination; no temporary-use or event rules"}
+  - {id: G28, status: out of scope, need: "Notify applicants of review status", feature: ""}
+  - {id: G29, status: partial,      need: "Query records by polygon, line or point, e.g. similar uses within a radius", feature: "Lasso, box, block and notice-radius queries over parcels and uses", gap: "Permit and business records are not included"}
+  - {id: G30, status: not met,      need: "Follow a case from planning through permits, licences and enforcement", gap: "No cross-module case record"}
