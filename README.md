@@ -2,6 +2,8 @@
 
 A playable demo of PlanArena, a parcel-level planning model, on 42,075 real Manhattan parcels (NYC DCP MapPLUTO 25v3.1).
 
+**Live:** [planarena-manhattan.onrender.com/play](https://planarena-manhattan.onrender.com/play) (game) and [planarena-manhattan.onrender.com](https://planarena-manhattan.onrender.com) (Studio).
+
 - **Phone game:** `/play`. Re-plan a neighbourhood: add homes, keep parks close, cut emissions, then put your plan to a simulated stakeholder council against the recommended plan.
 - **Studio (desktop):** `/`. Paint uses and densities and see 11 indicators with sensitivity ranges, redevelopment likelihood and recommended plans.
 
