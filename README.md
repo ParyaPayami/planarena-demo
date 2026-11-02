@@ -13,4 +13,4 @@ A playable demo of PlanArena, a parcel-level planning model, on 42,075 real Manh
 
 Part of the Esri UC 2027 talk *AI Predicts, ArcGIS Pro Checks: Testing Planning Forecasts Against Reality* (Parya Payami, University of Wisconsin–Milwaukee). The ArcGIS Pro checks of PlanArena's forecasts are at [github.com/ParyaPayami/proveit](https://github.com/ParyaPayami/proveit).
 
-**License.** No license has been granted yet: the code is shown to run the demo, and all rights are reserved by the author. PlanArena's full code and paper will be released together.
+**License.** No license has been granted yet: the code is shown to run the demo, and all rights are reserved by the author. PlanArena's full code and paper are released separately under the MIT license at [github.com/ParyaPayami/PlanArena](https://github.com/ParyaPayami/PlanArena).
